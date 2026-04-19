@@ -17,4 +17,8 @@ public class Review {
     private String body;
     private LocalDateTime created;
     private LocalDateTime updated;
+
+    public Review(String body) {
+        this.body = body;
+    }
 }
