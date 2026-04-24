@@ -52,6 +52,7 @@ Default local URL:
 ## API endpoints (current)
 - `GET /api/v1/movies` — fetch all movies
 - `GET /api/v1/movies/{imdbId}` — fetch one movie by IMDb ID
+- `POST /api/v1/reviews` — create a review for a movie
 
 ## Run tests
 From `backend/`:
