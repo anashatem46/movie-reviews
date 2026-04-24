@@ -11,15 +11,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class ReviewService {
 
-    private ReviewRepository reviewRepository;
-    private MongoTemplate mongoTemplate  ;
-    public Review createReview(String reviewBody, String imdbId){
+    private final ReviewRepository reviewRepository;
+    private final MongoTemplate mongoTemplate;
 
+    public Review createReview(String reviewBody, String imdbId) {
         Review review = reviewRepository.insert(new Review(reviewBody));
 
-        mongoTemplate.update(Movie.class).matching(Criteria.where("imdbId").is(imdbId)).apply(new Update().push("reviewIds").value(review)).first();
+        mongoTemplate.update(Movie.class)
+                .matching(Criteria.where("imdbId").is(imdbId))
+                .apply(new Update().push("reviews").value(review))
+                .first();
 
         return review;
     }
-
 }

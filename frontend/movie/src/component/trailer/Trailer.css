@@ -1,0 +1,82 @@
+.trailer-page {
+  width: min(1000px, 95%);
+  margin: 32px auto;
+}
+
+.trailer-page h2 {
+  color: gold;
+  margin-bottom: 16px;
+}
+
+.trailer-page a {
+  display: inline-block;
+  margin-top: 16px;
+  color: gold;
+  text-decoration: none;
+}
+
+.trailer-frame-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border: 1px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+}
+
+.trailer-frame-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.review-form {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.review-form label {
+  font-weight: 600;
+}
+
+.review-form textarea {
+  width: 100%;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 10px;
+  background: #121212;
+  color: #eee;
+}
+
+.review-form button {
+  width: fit-content;
+  border: 1px solid gold;
+  border-radius: 8px;
+  background: transparent;
+  color: gold;
+  padding: 8px 12px;
+}
+
+.review-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.review-item {
+  border: 1px solid #2e2e2e;
+  border-radius: 8px;
+  padding: 10px;
+  background: #111;
+}
+
+.review-empty,
+.review-error {
+  color: #d2d2d2;
+}
